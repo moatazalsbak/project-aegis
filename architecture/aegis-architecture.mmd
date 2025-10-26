@@ -1,0 +1,54 @@
+graph TB
+    Start([AWS Environment]) --> Discovery[Discovery Engine]
+    
+    subgraph Layer1 [Layer 1: Rightsizing]
+        Discovery --> CO[AWS Compute Optimizer]
+        CO --> Validate1[Lambda Power Tuning]
+        Validate1 --> Decision1{Safe?}
+        Decision1 -->|Yes| Apply1[Apply via Terraform]
+        Decision1 -->|No| Skip1[Skip]
+    end
+    
+    subgraph Layer2 [Layer 2: Graviton Migration]
+        Discovery --> Config[AWS Config]
+        Config --> Compat[Compatibility Check]
+        Compat --> Canary[Canary Deployment]
+        Canary --> Monitor1[Monitor Performance]
+        Monitor1 --> Decision2{Better?}
+        Decision2 -->|Yes| Migrate[Full Migration]
+        Decision2 -->|No| Rollback1[Rollback]
+    end
+    
+    subgraph Layer3 [Layer 3: Spot Orchestration]
+        Discovery --> ASG[Auto Scaling Groups]
+        ASG --> Mixed[Mixed Instance Policy]
+        Mixed --> Monitor2[Monitor Interruptions]
+        Monitor2 --> Rebalance[Dynamic Rebalancing]
+    end
+    
+    subgraph Layer4 [Layer 4: Anomaly Detection]
+        Monitor3[AWS Cost Anomaly Detection] --> ML[ML Models]
+        ML --> Alert{Anomaly?}
+        Alert -->|Yes| Runbook[Consult Runbook]
+        Runbook --> Auto[Automated Action]
+        Alert -->|No| Continue[Continue Monitoring]
+    end
+    
+    Apply1 --> Results[Cost Savings]
+    Migrate --> Results
+    Rebalance --> Results
+    Auto --> Results
+    Skip1 --> Discovery
+    Rollback1 --> Discovery
+    Continue --> Monitor3
+    
+    Results --> Feedback[Feedback Loop]
+    Feedback --> Discovery
+    
+    style Discovery fill:#e1f5ff,stroke:#0366d6
+    style Results fill:#d4edda,stroke:#28a745
+    style Feedback fill:#fff3cd,stroke:#ffc107
+    style Layer1 fill:#f0f8ff,stroke:#4682b4
+    style Layer2 fill:#fff5e6,stroke:#ff9800
+    style Layer3 fill:#f3e5f5,stroke:#9c27b0
+    style Layer4 fill:#e8f5e9,stroke:#4caf50
