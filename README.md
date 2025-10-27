@@ -289,9 +289,7 @@ This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) 
 ## 💬 Community & Support
 
 - **GitHub Discussions**: Ask questions and share experiences
-- **Twitter**: Follow [@ProjectAegis](https://twitter.com/projectaegis) for updates
-- **Slack**: Join our [community workspace](https://join.slack.com/aegis-community)
-- **Email**: support@projectaegis.dev
+
 
 ---
 
