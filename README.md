@@ -1,7 +1,11 @@
 # 🛡️ Project Aegis: The Self-Driving Cost Optimizer for AWS
+
 In the meantime, feel free to explore the code or reach out to the community with any questions!
+
 ---
+
 ## 🎯 Roadmap
+
 - [x] Core optimization engine
 - [x] Graviton migration automation
 - [x] Spot instance orchestration
@@ -11,25 +15,39 @@ In the meantime, feel free to explore the code or reach out to the community wit
 - [ ] ML-powered workload prediction
 - [ ] Carbon footprint optimization
 - [ ] SaaS management integration
+
 ---
+
 ## 📄 License
-This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) file for details.
+
+License details coming soon.
+
 ---
+
 ## 🌟 Acknowledgments
+
 - AWS Compute Optimizer team for the excellent API
 - [AWS Lambda Power Tuning](https://github.com/alexcasalboni/aws-lambda-power-tuning) by Alex Casalboni
 - The open-source FinOps community
 - All contributors who make this project possible
+
 ---
+
 ## 💬 Community & Support
+
 - **GitHub Discussions**: Ask questions and share experiences
+
 ---
+
 ## 🔗 Resources & References
+
 - [AWS Cost Optimization Best Practices](https://aws.amazon.com/pricing/cost-optimization/)
 - [Graviton Performance Studies](https://aws.amazon.com/ec2/graviton/)
 - [Spot Instance Best Practices](https://aws.amazon.com/ec2/spot/)
 - [FinOps Foundation](https://www.finops.org/)
+
 ---
+
 <div align="center">
 
 ### 🚀 Ready to Transform Your AWS Costs?
